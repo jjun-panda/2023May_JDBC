@@ -17,9 +17,9 @@
 	
 		Class.forName("org.mariadb.jdbc.Driver");
 		// Class.forName("com.mariadb.jdbc.Driver"); //MySQL 사용
-		out.print("드라이버 연결 성공...<br>");
+		out.print("드라이버 로드 성공...<br>");
 	} catch(ClassNotFoundException err) {
-		out.print("드라이버 로드 실패..." + err.getMessage());
+		out.print("드라이버 로드 실패...<br>" + err.getMessage());
 	}
 %>
 </body>

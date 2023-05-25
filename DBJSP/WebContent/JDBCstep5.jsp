@@ -39,5 +39,19 @@
 		out.print("연결 객체 생성 실패...<br>" + err.getMessage());
 	}
 %>
+
+<!-- Step 4. SQL Activate -->
+<%
+String sql = "SELECT * FROM saram";
+PreparedStatement pstmt = conn.prepareStatement(sql);
+out.print("구문 생성 성공");
+%>
+
+<!-- Step 5. Statement Object -->
+<%
+// pstmt.executeQuery(); // Read 즉 가지고 나오는 데이터가 있을 경우 사용
+pstmt.executeUpdate(); // Create, Update, Delete 즉 가지고 나오는 데이터가 없는 경우 사
+out.print("테이블 삭제 성공...<br>");
+%>
 </body>
 </html>

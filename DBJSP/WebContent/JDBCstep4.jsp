@@ -39,5 +39,12 @@
 		out.print("연결 객체 생성 실패...<br>" + err.getMessage());
 	}
 %>
+
+<!-- Step 4. Statement Object -->
+<%
+String sql = "SELECT * FROM student";
+PreparedStatement pstmt = conn.prepareStatement(sql);
+out.print("구문 생성 성공");
+%>
 </body>
 </html>

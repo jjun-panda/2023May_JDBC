@@ -39,5 +39,29 @@
 		out.print("연결 객체 생성 실패...<br>" + err.getMessage());
 	}
 %>
+
+<!-- Step 4. Statement Object -->
+<%
+String sql = "SELECT * FROM saram";
+PreparedStatement pstmt = conn.prepareStatement(sql);
+out.print("구문 생성 성공");
+%>
+
+<!-- Step 5. SQL Activate -->
+<%
+// pstmt.executeQuery(); // Read 즉 가지고 나오는 데이터가 있을 경우 사용
+pstmt.executeUpdate(); // Create, Update, Delete 즉 가지고 나오는 데이터가 없는 경우 사
+out.print("테이블 삭제 성공...<br>");
+%>
+
+<!-- Step 6. ResultSet Object -->
+<!--  
+C R U D 중에서 반환데이터가 있는 경우는 R만이다.
+C U D 의 경우는 반환되는 데이터가 없다. 따라서 CUD는 Step 6이 생략된다.
+
+하지만 CU의 경우에도 반환되는 데이터가 존재하기는 한다.
+성공했을 경우는 1이 반환되고, 실패했을 경우에는 0이 반환된다. 
+-->
+
 </body>
 </html>
