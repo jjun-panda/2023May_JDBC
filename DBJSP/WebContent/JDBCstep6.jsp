@@ -30,7 +30,7 @@
 		//String host = "jdbc:mysql://localhost:3306/";
 		String host = "jdbc:mariadb://localhost:3306/jjun";
 		String id = "jjun";
-		String ps = "jjun";
+		String ps = "1234";
 	
 		conn = DriverManager.getConnection(host, id, ps);
 		out.print("연결 객체 생성 성공...<br>");

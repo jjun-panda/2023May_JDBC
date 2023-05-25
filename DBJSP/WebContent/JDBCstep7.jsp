@@ -30,7 +30,7 @@
 		//String host = "jdbc:mysql://localhost:3306/";
 		String host = "jdbc:mariadb://localhost:3306/jjun";
 		String id = "jjun";
-		String ps = "jjun";
+		String ps = "1234";
 	
 		conn = DriverManager.getConnection(host, id, ps);
 		out.print("연결 객체 생성 성공...<br>");
@@ -69,8 +69,9 @@ C U D 의 경우는 반환되는 데이터가 없다. 따라서 CUD는 Step 6이
 8 이후 부터는 생략가능 즉 닫지 않아도 문제가 없다. 자동으로 닫아준다.
  -->
  
+<%
 pstmt.close();
 conn.close();
-
+%>
 </body>
 </html>
